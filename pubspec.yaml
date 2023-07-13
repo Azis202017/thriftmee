@@ -10,7 +10,6 @@ dependencies:
   flutter:
     sdk: flutter
   get: 4.6.5
-  get_cli: ^1.8.1
   google_fonts: ^5.1.0
   http: ^1.1.0
 
