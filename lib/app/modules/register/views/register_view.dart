@@ -46,15 +46,60 @@ class RegisterView extends GetView<RegisterController> {
               ),
               SizedBox(height: 15),
               Row(
+                children: [
+                  Expanded(
+                      child: Divider(
+                    thickness: 2,
+                  )),
+                  Container(
+                    child: Text('atau daftar dengan'),
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                  ),
+                  Expanded(
+                      child: Divider(
+                    thickness: 2,
+                  )),
+                ],
+              ),
+              SizedBox(height: 15),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primary,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: EdgeInsets.symmetric(vertical: 16),
+                ),
+                onPressed: null,
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Image.network(
+                    'https://res.cloudinary.com/dvjflmrkd/image/upload/v1689273607/thriftmee/qv5ckjmgpo1ixwgah5ib.png',
+                  ),
+                  SizedBox(width: 10),
+                  Text('Google'),
+                ]),
+              ),
+              SizedBox(height: 7),
+              Text(
+                'Dengan mendaftar di sini, kamu menyetujui Syarat & Ketentuan serta Kebijakan Privasi Thriftmee.',
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 54),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Sudah punya akun?'),
                   TextButton(
                     onPressed: () {},
-                    child: Text('Masuk'),
+                    child: Text(
+                      'Masuk',
+                      style: TextStyle(color: primary),
+                    ),
                   ),
                 ],
               ),
+              SizedBox(height: 15),
             ],
           ),
         ),
