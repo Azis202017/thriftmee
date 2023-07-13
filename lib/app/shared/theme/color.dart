@@ -35,3 +35,4 @@ const Color black = Colors.black;
 const Color font = Color(0xff1E1E1E);
 const Color secondaryColor2 = Color(0xffF4FBF7);
 const Color fontAbu = Color(0xff686868);
+const Color whiteColor = Colors.white;
