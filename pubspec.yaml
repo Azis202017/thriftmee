@@ -23,6 +23,9 @@ flutter:
   uses-material-design: true
 flutter_native_splash:
   color: "#ffffff"
+  color_dark_android: "#ffffff"
+  color_dark_ios: "#ffffff"
+  color_ios : "#ffffff"
   image: assets/img/splashscreen.png
   android: true
   ios: true
