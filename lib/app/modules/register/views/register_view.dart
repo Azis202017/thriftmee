@@ -13,136 +13,140 @@ class RegisterView extends GetView<RegisterController> {
       builder: (_) {
         return SafeArea(
           child: Scaffold(
-            body: Container(
-              margin: const EdgeInsets.only(top: 37, left: 16, right: 16),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Image.network(
-                    'https://res.cloudinary.com/dvjflmrkd/image/upload/v1689270044/thriftmee/c9nantsck1lhat9ctcwr.png',
-                  ),
-                  const SizedBox(height: 22),
-                  const Text(
-                    'Ayo Gabung Sekarang',
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 22),
-                  TextFormField(
-                    controller: controller.emailController,
-                    decoration: InputDecoration(
-                      labelText: 'Nama Lengkap',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
+            body: SingleChildScrollView(
+              child: Container(
+                margin: const EdgeInsets.only(top: 37, left: 16, right: 16),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Image.network(
+                      'https://res.cloudinary.com/dvjflmrkd/image/upload/v1689270044/thriftmee/c9nantsck1lhat9ctcwr.png',
                     ),
-                  ),
-                  const SizedBox(height: 4),
-                  const Text('Contoh : 0881098738'),
-                  const SizedBox(height: 17),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: primary,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      padding: const EdgeInsets.symmetric(vertical: 16),
+                    const SizedBox(height: 22),
+                    const Text(
+                      'Ayo Gabung Sekarang',
+                      textAlign: TextAlign.center,
                     ),
-                    onPressed: controller.emailController.text.length > 3
-                        ? controller.nextRegister
-                        : null,
-                    child: Text(
-                      'Selanjutnya',
-                      style: h4Bold,
-                    ),
-                  ),
-                  const SizedBox(height: 15),
-                  Row(
-                    children: [
-                      const Expanded(
-                        child: Divider(
-                          thickness: 2,
+                    const SizedBox(height: 22),
+                    TextFormField(
+                      onChanged: controller.updateButtonState,
+                      controller: controller.emailController,
+                      decoration: InputDecoration(
+                        labelText: 'Nama Lengkap',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 10),
-                        child: const Text('atau daftar dengan'),
+                    ),
+                    const SizedBox(height: 4),
+                    const Text('Contoh : 0881098738'),
+                    const SizedBox(height: 17),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                            controller.isButtonEnabled ? primary : fontAbu,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        padding: const EdgeInsets.symmetric(vertical: 16),
                       ),
-                      const Expanded(
-                        child: Divider(
-                          thickness: 2,
+                      onPressed: controller.nextRegister,
+                      child: Text(
+                        'Selanjutnya',
+                        style: h4Bold.copyWith(
+                          color: whiteColor,
                         ),
                       ),
-                    ],
-                  ),
-                  const SizedBox(height: 15),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(10),
                     ),
-                    height: 52,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    const SizedBox(height: 15),
+                    Row(
                       children: [
-                        Image.network(
-                          'https://res.cloudinary.com/dvjflmrkd/image/upload/v1689273607/thriftmee/qv5ckjmgpo1ixwgah5ib.png',
+                        const Expanded(
+                          child: Divider(
+                            thickness: 2,
+                          ),
                         ),
-                        const SizedBox(width: 10),
-                        Text(
-                          'Google',
-                          style: h4Bold,
+                        Container(
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          child: const Text('atau daftar dengan'),
+                        ),
+                        const Expanded(
+                          child: Divider(
+                            thickness: 2,
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                  const SizedBox(height: 7),
-                  RichText(
-                    textAlign: TextAlign.center,
-                    text: const TextSpan(
-                      text: 'Dengan mendaftar di sini, kamu menyetujui ',
-                      style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black),
-                      children: [
-                        TextSpan(
-                          text: 'Syarat & Ketentuan',
-                          style: TextStyle(
-                            color: primary,
-                          ),
-                        ),
-                        TextSpan(text: ' serta '),
-                        TextSpan(
-                          text: 'Kebijakan Privasi',
-                          style: TextStyle(
-                            color: primary,
-                          ),
-                        ),
-                        TextSpan(text: ' Thriftmee.'),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 54),
-                  GestureDetector(
-                    onTap: controller.login,
-                    child: RichText(
-                      text: TextSpan(
-                        text: 'Sudah punya akun?',
-                        style: h5Medium,
+                    const SizedBox(height: 15),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      height: 52,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          TextSpan(
-                            text: 'Masuk',
-                            style: h5Medium.copyWith(
-                              color: primary,
-                            ),
+                          Image.network(
+                            'https://res.cloudinary.com/dvjflmrkd/image/upload/v1689273607/thriftmee/qv5ckjmgpo1ixwgah5ib.png',
+                          ),
+                          const SizedBox(width: 10),
+                          Text(
+                            'Google',
+                            style: h4Bold,
                           ),
                         ],
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 15),
-                ],
+                    const SizedBox(height: 7),
+                    RichText(
+                      textAlign: TextAlign.center,
+                      text: const TextSpan(
+                        text: 'Dengan mendaftar di sini, kamu menyetujui ',
+                        style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black),
+                        children: [
+                          TextSpan(
+                            text: 'Syarat & Ketentuan',
+                            style: TextStyle(
+                              color: primary,
+                            ),
+                          ),
+                          TextSpan(text: ' serta '),
+                          TextSpan(
+                            text: 'Kebijakan Privasi',
+                            style: TextStyle(
+                              color: primary,
+                            ),
+                          ),
+                          TextSpan(text: ' Thriftmee.'),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 54),
+                    GestureDetector(
+                      onTap: controller.login,
+                      child: RichText(
+                        text: TextSpan(
+                          text: 'Sudah punya akun?',
+                          style: h5Medium,
+                          children: [
+                            TextSpan(
+                              text: 'Masuk',
+                              style: h5Medium.copyWith(
+                                color: primary,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 15),
+                  ],
+                ),
               ),
             ),
           ),
