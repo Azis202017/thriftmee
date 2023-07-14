@@ -24,8 +24,9 @@ class RegisterView extends GetView<RegisterController> {
                       'https://res.cloudinary.com/dvjflmrkd/image/upload/v1689270044/thriftmee/c9nantsck1lhat9ctcwr.png',
                     ),
                     const SizedBox(height: 22),
-                    const Text(
+                     Text(
                       'Ayo Gabung Sekarang',
+                      style: h2Bold,
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 22),
@@ -69,7 +70,7 @@ class RegisterView extends GetView<RegisterController> {
                         ),
                         Container(
                           margin: const EdgeInsets.symmetric(horizontal: 10),
-                          child: const Text('atau daftar dengan'),
+                          child:  Text('atau daftar dengan', style : body2Bold),
                         ),
                         const Expanded(
                           child: Divider(
@@ -79,24 +80,23 @@ class RegisterView extends GetView<RegisterController> {
                       ],
                     ),
                     const SizedBox(height: 15),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      height: 52,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.network(
-                            'https://res.cloudinary.com/dvjflmrkd/image/upload/v1689273607/thriftmee/qv5ckjmgpo1ixwgah5ib.png',
-                          ),
-                          const SizedBox(width: 10),
-                          Text(
-                            'Google',
-                            style: h4Bold,
-                          ),
-                        ],
+                    SizedBox(
+                      height: 56,
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.network(
+                              'https://res.cloudinary.com/dvjflmrkd/image/upload/v1689273607/thriftmee/qv5ckjmgpo1ixwgah5ib.png',
+                            ),
+                            const SizedBox(width: 10),
+                            Text(
+                              'Google',
+                              style: h4Bold,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(height: 7),
@@ -127,20 +127,22 @@ class RegisterView extends GetView<RegisterController> {
                       ),
                     ),
                     const SizedBox(height: 54),
-                    GestureDetector(
-                      onTap: controller.login,
-                      child: RichText(
-                        text: TextSpan(
-                          text: 'Sudah punya akun?',
-                          style: h5Medium,
-                          children: [
-                            TextSpan(
-                              text: 'Masuk',
-                              style: h5Medium.copyWith(
-                                color: primary,
+                    Center(
+                      child: GestureDetector(
+                        onTap: controller.toLoginPage,
+                        child: RichText(
+                          text: TextSpan(
+                            text: 'Sudah punya akun? ',
+                            style: h5Medium,
+                            children: [
+                              TextSpan(
+                                text: 'Masuk',
+                                style: h5Medium.copyWith(
+                                  color: primary,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),

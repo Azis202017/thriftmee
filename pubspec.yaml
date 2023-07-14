@@ -22,12 +22,12 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 flutter_native_splash:
-  color: #fff
-  image: https://res.cloudinary.com/dkkga3pht/image/upload/v1689308964/Asset_1_1_nveabi.png
+  color: "#ffffff"
+  image: assets/img/splashscreen.png
   android: true
   ios: true
   android_12:
-    image: https://res.cloudinary.com/dkkga3pht/image/upload/v1689308964/Asset_1_1_nveabi.png
-    image_dark: https://res.cloudinary.com/dkkga3pht/image/upload/v1689308964/Asset_1_1_nveabi.png
-    color : #fff
-    color_dark: #fff
+    image: assets/img/splashscreen.png
+    image_dark: assets/img/splashscreen.png
+    color : "#ffffff"
+    color_dark: "#ffffff"

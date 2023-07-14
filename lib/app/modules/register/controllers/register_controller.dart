@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:thriftmee/app/routes/app_pages.dart';
 
 class RegisterController extends GetxController {
   TextEditingController emailController = TextEditingController();
@@ -9,8 +10,8 @@ class RegisterController extends GetxController {
     update();
   }
 
-  void login() {
-    //TODO login page
+  void toLoginPage() {
+    Get.toNamed(Routes.LOGIN);
   }
   void nextRegister() {}
   @override
