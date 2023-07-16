@@ -17,7 +17,7 @@ class SplashScreenView extends GetView<SplashScreenController> {
         timer.cancel();
       });
     }, builder: (context) {
-      return Scaffold(
+      return Scaffold(  
         body: Center( 
           child: Image.network(
             'https://res.cloudinary.com/dkkga3pht/image/upload/v1689334371/Artboard_1_1_1_xynrsl.png',
