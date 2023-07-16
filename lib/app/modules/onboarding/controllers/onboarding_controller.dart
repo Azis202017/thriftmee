@@ -12,8 +12,7 @@ class OnboardingController extends GetxController {
     update();
   }
   void login() {
-    Get.toNamed(Routes.LOGIN);
-    
+    Get.offAndToNamed(Routes.LOGIN);    
   }
   void skip() {
     index = 1;
