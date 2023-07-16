@@ -12,7 +12,6 @@ void main() {
       title: "ThriftMee",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
-      themeMode: ThemeMode.system,
       theme: theme,
     ),
   );

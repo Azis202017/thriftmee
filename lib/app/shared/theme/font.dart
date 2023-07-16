@@ -26,7 +26,7 @@ TextStyle h4Regular = GoogleFonts.poppins(
 TextStyle h5Regular = GoogleFonts.poppins(
   fontWeight: FontWeight.w400,
   color: font,
-  fontSize: 15,
+  fontSize: 12,
 );
 
 TextStyle h6Regular = GoogleFonts.poppins(

@@ -42,6 +42,12 @@ ThemeData theme = ThemeData(
       ),
     ),
   ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(8),
+    )),
+  ),
 );
 
 ThemeData themeDark = ThemeData(
