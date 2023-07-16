@@ -42,13 +42,13 @@ class LoginView extends GetView<LoginController> {
                 const SizedBox(height: 8),
                 TextField(
                   controller: controller.passwordController,
-                  obscureText: controller.isShowPassword ? true : false,
+                  obscureText: !controller.isShowPassword ? true : false,
                   onChanged: controller.checkFillPassword,
                   decoration: InputDecoration(
                     hintText: 'Masukkan kata sandi',
                     suffixIcon: GestureDetector(
                       onTap: controller.showVisible,
-                      child: controller.isShowPassword
+                      child: !controller.isShowPassword
                           ? const Icon(Icons.visibility_off)
                           : const Icon(Icons.visibility),
                     ),
