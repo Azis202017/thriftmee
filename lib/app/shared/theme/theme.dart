@@ -5,6 +5,12 @@ import 'font.dart';
 
 ThemeData theme = ThemeData(
   scaffoldBackgroundColor: whiteColor,
+  appBarTheme: const AppBarTheme(
+    backgroundColor: whiteColor,
+    elevation: 0,
+    
+    foregroundColor: font
+  ),
   indicatorColor: primary,
   colorScheme: ColorScheme.fromSwatch().copyWith(
     primary: primary,
@@ -12,7 +18,9 @@ ThemeData theme = ThemeData(
     error: errorColor,
   ),
   inputDecorationTheme: InputDecorationTheme(
-    hintStyle: placeholder.copyWith(color: greyColor),
+    hintStyle: placeholder.copyWith(
+      color: greyColor,
+    ),
     border: InputBorder.none,
     outlineBorder: const BorderSide(
       color: greyColor,
@@ -23,10 +31,11 @@ ThemeData theme = ThemeData(
         color: greyColor,
       ),
     ),
+    focusColor: font,
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: const BorderSide(
-        color: greyColor,
+        color: font,
       ),
     ),
     focusedErrorBorder: OutlineInputBorder(
@@ -45,7 +54,7 @@ ThemeData theme = ThemeData(
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.circular(8),
     )),
   ),
 );
@@ -67,19 +76,22 @@ ThemeData themeDark = ThemeData(
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: const BorderSide(
-        color: greyColor,
+        color: font,
+        width: 2,
       ),
     ),
+    focusColor: font,
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: const BorderSide(
-        color: greyColor,
+        color: font,
+        width: 2,
       ),
     ),
     focusedErrorBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: const BorderSide(
-        color: greyColor,
+        color: errorColor,
       ),
     ),
     errorBorder: OutlineInputBorder(

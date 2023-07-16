@@ -196,7 +196,7 @@ TextStyle buttonLinkXSBold = GoogleFonts.poppins(
 TextStyle placeholder = GoogleFonts.poppins(
   fontWeight: FontWeight.w400,
   color: font,
-  fontSize: 16,
+  fontSize: 12,
 );
 TextStyle textDescription = GoogleFonts.poppins(
   fontWeight: FontWeight.w400,

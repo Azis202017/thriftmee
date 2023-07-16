@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:thriftmee/app/shared/theme/color.dart';
 
-import '../../theme/color.dart';
-import '../../theme/font.dart';
 
-class OnboardingButton extends StatelessWidget {
-  const OnboardingButton({
+class BottomNavigationButton extends StatelessWidget {
+  const BottomNavigationButton({
     super.key,
     required this.onTap,
     required this.text,
+    this.color,
+    this.style,
   });
   final String text;
   final void Function()? onTap;
-
+  final Color? color;
+  final TextStyle? style;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,10 +25,13 @@ class OnboardingButton extends StatelessWidget {
         right: 16,
       ),
       child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: color ?? primary
+        ),
         onPressed: onTap,
         child: Text(
           text,
-          style: h3Bold.copyWith(color: whiteColor),
+          style: style,
         ),
       ),
     );

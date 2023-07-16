@@ -29,7 +29,7 @@ const Color accent8 = Color(0xff0E1E0A);
 const Color accent85 = Color(0xff0B1708);
 const Color accent9 = Color(0xff070F05);
 
-const Color placeHolder = Color(0xffC8C8C8);
+const Color placeHolder = Color(0xff807474);
 const Color black = Colors.black;
 const Color font = Color(0xff1E1E1E);
 const Color secondaryColor2 = Color(0xffF4FBF7);
@@ -38,3 +38,6 @@ const Color whiteColor = Colors.white;
 const Color errorColor = Colors.red;
 const Color greyColor = Color(0xffAEB2B7);
 const Color grey2Color = Color(0xff858597);
+const Color grey3Color = Color(0xffB0AAAA);
+const Color grey4Color = Color(0xffD9D9D9);
+

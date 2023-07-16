@@ -79,6 +79,7 @@ class RegisterView extends GetView<RegisterController> {
                         ),
                       ],
                     ),
+                  
                     const SizedBox(height: 15),
                     SizedBox(
                       height: 56,
@@ -99,6 +100,7 @@ class RegisterView extends GetView<RegisterController> {
                         ),
                       ),
                     ),
+                   
                     const SizedBox(height: 7),
                     RichText(
                       textAlign: TextAlign.center,

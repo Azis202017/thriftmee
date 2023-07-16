@@ -90,9 +90,11 @@ class OnboardingView extends GetView<OnboardingController> {
                 ),
               ],
             ),
-            bottomNavigationBar: OnboardingButton(
+            bottomNavigationBar: BottomNavigationButton(
               onTap: controller.index >= 1 ? controller.login : controller.next,
               text: controller.index >= 1 ? 'Bergabung' : 'Next',
+              style: h3Bold.copyWith(color: whiteColor),
+              
             ),
           ),
         );

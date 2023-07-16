@@ -15,6 +15,8 @@ dependencies:
   google_fonts: ^5.1.0
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.13.1"
+
   flutter_lints: 2.0.2
   flutter_test:
     sdk: flutter
@@ -25,12 +27,17 @@ flutter_native_splash:
   color: "#ffffff"
   color_dark_android: "#ffffff"
   color_dark_ios: "#ffffff"
-  color_ios : "#ffffff"
+  color_ios: "#ffffff"
   image: assets/img/splash_screen.png
   android: true
   ios: true
   android_12:
     image: assets/img/splash_screen.png
     image_dark: assets/img/splash_screen.png
-    color : "#ffffff"
+    color: "#ffffff"
     color_dark: "#ffffff"
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/img/splash_screen.png"
+  min_sdk_android: 21
