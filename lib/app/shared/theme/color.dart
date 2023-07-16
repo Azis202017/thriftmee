@@ -30,6 +30,8 @@ const Color accent85 = Color(0xff0B1708);
 const Color accent9 = Color(0xff070F05);
 
 const Color placeHolder = Color(0xff807474);
+const Color placeHolder2 = Color(0xff807474);
+
 const Color black = Colors.black;
 const Color font = Color(0xff1E1E1E);
 const Color secondaryColor2 = Color(0xffF4FBF7);
