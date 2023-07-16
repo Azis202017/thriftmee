@@ -43,8 +43,8 @@ class OnboardingView extends GetView<OnboardingController> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(right: 16.0),
-                            child: TextButton(
-                              onPressed: controller.skip,
+                            child: GestureDetector(
+                              onTap: controller.skip,
                               child: Text(
                                 'Skip',
                                 style: h5Regular,
