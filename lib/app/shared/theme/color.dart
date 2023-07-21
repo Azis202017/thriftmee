@@ -42,4 +42,5 @@ const Color greyColor = Color(0xffAEB2B7);
 const Color grey2Color = Color(0xff858597);
 const Color grey3Color = Color(0xffB0AAAA);
 const Color grey4Color = Color(0xffD9D9D9);
+const Color inactiveColorButton = Color(0xff4B4B4B);
 
