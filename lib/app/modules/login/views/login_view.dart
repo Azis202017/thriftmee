@@ -85,10 +85,13 @@ class LoginView extends GetView<LoginController> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
-                        'Lupa Kata Sandi?',
-                        style: h5Regular.copyWith(
-                          color: primary,
+                      GestureDetector(
+                        onTap: controller.toForgetPassword,
+                        child: Text(
+                          'Lupa Kata Sandi?',
+                          style: h5Regular.copyWith(
+                            color: primary,
+                          ),
                         ),
                       ),
                     ],
