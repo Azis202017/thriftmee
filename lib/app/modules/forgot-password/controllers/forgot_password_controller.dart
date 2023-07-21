@@ -1,23 +1,25 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
+
 class ForgotPasswordController extends GetxController {
-  //TODO: Implement ForgotPasswordController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  TextEditingController emailController = TextEditingController();
+  String email = "";
+  void onChange(text) {
+    email = text;
+    update();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
+  void verificationPassword() {
+    
+    Get.toNamed(Routes.VERIFIKASI_PASSWORD, arguments: {
+      'email' : email,
+    });
   }
-
   @override
-  void onClose() {
-    super.onClose();
+  dispose() {
+    super.dispose();
+    emailController.text = "";
+    emailController.dispose();
   }
-
-  void increment() => count.value++;
 }
