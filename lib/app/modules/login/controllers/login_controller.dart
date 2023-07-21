@@ -67,4 +67,7 @@ class LoginController extends GetxController {
     print(validate);
     update();
   }
+  void toForgetPassword() {
+    Get.toNamed(Routes.FORGOT_PASSWORD);
+  }
 }
