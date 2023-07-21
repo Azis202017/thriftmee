@@ -6,11 +6,10 @@ import 'font.dart';
 ThemeData theme = ThemeData(
   scaffoldBackgroundColor: whiteColor,
   appBarTheme: const AppBarTheme(
-    backgroundColor: whiteColor,
-    elevation: 0,
-    
-    foregroundColor: font
-  ),
+      backgroundColor: whiteColor,
+      elevation: 0,
+      foregroundColor: font,
+      centerTitle: false),
   indicatorColor: primary,
   colorScheme: ColorScheme.fromSwatch().copyWith(
     primary: primary,
@@ -53,9 +52,20 @@ ThemeData theme = ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
+        disabledBackgroundColor: inactiveColorButton,
+        disabledForegroundColor: whiteColor,
+        backgroundColor: primary,
+        foregroundColor: whiteColor,
         shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(8),
-    )),
+          borderRadius: BorderRadius.circular(10),
+        )),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: OutlinedButton.styleFrom(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+    ),
   ),
 );
 
