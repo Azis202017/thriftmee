@@ -10,6 +10,8 @@ import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/register/bindings/register_binding.dart';
 import '../modules/register/views/register_view.dart';
+import '../modules/verifikasi_password/bindings/verifikasi_password_binding.dart';
+import '../modules/verifikasi_password/views/verifikasi_password_view.dart';
 
 part 'app_routes.dart';
 
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.FORGOT_PASSWORD,
       page: () => const ForgotPasswordView(),
       binding: ForgotPasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.VERIFIKASI_PASSWORD,
+      page: () => const VerifikasiPasswordView(),
+      binding: VerifikasiPasswordBinding(),
     ),
   ];
 }
