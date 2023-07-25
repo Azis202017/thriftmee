@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:thriftmee/app/routes/app_pages.dart';
 import 'package:thriftmee/app/shared/theme/color.dart';
@@ -64,9 +65,9 @@ class LoginController extends GetxController {
         backgroundColor: errorColor,
       );
     }
-    print(validate);
     update();
   }
+
   void toForgetPassword() {
     Get.toNamed(Routes.FORGOT_PASSWORD);
   }
