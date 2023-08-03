@@ -36,7 +36,7 @@ class LoginController extends GetxController {
   }
 
   void validateLogin() {
-    validate = emailController.text == "azisa6980" &&
+    validate = emailController.text == "azisa6980@gmail.com" &&
         passwordController.text == "Lolitaa1231";
     if (validate) {
       if (loginGoogle) {
@@ -55,6 +55,7 @@ class LoginController extends GetxController {
           colorText: Colors.white,
           backgroundColor: Colors.green,
         );
+        Get.offAndToNamed(Routes.HOME);
       }
     } else {
       Get.snackbar(
