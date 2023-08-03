@@ -10,6 +10,13 @@ abstract class Routes {
   static const ONBOARDING = _Paths.ONBOARDING;
   static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
   static const VERIFIKASI_PASSWORD = _Paths.VERIFIKASI_PASSWORD;
+  static const NOTIFICATION = _Paths.NOTIFICATION;
+  static const SETTINGS = _Paths.SETTINGS;
+  static const SETTINGS_PESANAN = _Paths.SETTINGS_PESANAN;
+  static const SETTINGS_OTHER = _Paths.SETTINGS_OTHER;
+  static const CART = _Paths.CART;
+  static const DETAIL_PRODUCT = _Paths.DETAIL_PRODUCT;
+  static const TRY_ON = _Paths.TRY_ON;
 }
 
 abstract class _Paths {
@@ -21,4 +28,11 @@ abstract class _Paths {
   static const ONBOARDING = '/onboarding';
   static const FORGOT_PASSWORD = '/forgot-password';
   static const VERIFIKASI_PASSWORD = '/verifikasi-password';
+  static const NOTIFICATION = '/notification';
+  static const SETTINGS = '/settings';
+  static const SETTINGS_PESANAN = '/settings-pesanan';
+  static const SETTINGS_OTHER = '/settings-other';
+  static const CART = '/cart';
+  static const DETAIL_PRODUCT = '/detail-product';
+  static const TRY_ON = '/try-on';
 }
