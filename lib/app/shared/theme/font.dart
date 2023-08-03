@@ -150,6 +150,16 @@ TextStyle body2Bold = GoogleFonts.poppins(
   color: font,
   fontSize: 14,
 );
+TextStyle body2SemiBold = GoogleFonts.poppins(
+  fontWeight: FontWeight.w600,
+  color: font,
+  fontSize: 14,
+);
+TextStyle body2Medium = GoogleFonts.poppins(
+  fontWeight: FontWeight.w500,
+  color: font,
+  fontSize: 14,
+);
 
 TextStyle buttonLinkLRegular = GoogleFonts.poppins(
   fontWeight: FontWeight.w400,
