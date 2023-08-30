@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
+import 'package:thriftmee/app/constant/image_collection.dart';
+import 'package:thriftmee/app/shared/theme/color.dart';
+import 'package:thriftmee/app/shared/theme/font.dart';
 
 import '../controllers/home_toko_controller.dart';
 
@@ -9,16 +11,274 @@ class HomeTokoView extends GetView<HomeTokoController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: placeHolder,
       appBar: AppBar(
-        title: const Text('HomeTokoView'),
+        title: Text('Toko Saya', style: h3SemiBold),
         centerTitle: true,
+        elevation: 1,
       ),
-      body: const Center(
-        child: Text(
-          'HomeTokoView is working',
-          style: TextStyle(fontSize: 20),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              width: Get.width,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              color: whiteColor,
+              child: Column(
+                children: [
+                  const SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Image.network(avatarMeiMeiShop, width: 75, height: 75),
+                      const SizedBox(width: 16),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("MeiMei Shop.", style: h3SemiBold),
+                          Row(
+                            children: [
+                              Image.network(iconPengikut, width: 24, height: 24),
+                              const SizedBox(width: 8),
+                              Text("10 Pengikut", style: textDescription.copyWith(color: const Color(0xff5D5F60))),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: 358,
+                    // height: 71,
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      border: Border.all(color: boxAbu),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Column(
+                      children: [
+                        Text("Transaksi Penjual", style: h4SemiBold),
+                        const SizedBox(height: 8),
+                        const MySeparator(color: boxAbu),
+                        const SizedBox(height: 8),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text("Transaksi sejak bergabung", style: textDescription),
+                            Text("0", style: h4SemiBold),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                ],
+              ),
+            ),
+            const SizedBox(height: 12),
+            Container(
+              width: Get.width,
+              // height: 458,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              color: whiteColor,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 24),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Penjualan", style: h4SemiBold),
+                      Text("Lihat Riwayat", style: h5SemiBold.copyWith(color: primary)),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 45),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: const Color(0xffF4FBF9),
+                                border: Border.all(color: boxAbu),
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Image.network(iconPesananBaru, width: 43, height: 43),
+                            ),
+                            const SizedBox(height: 4),
+                            Text("Pesanan Baru", style: textDescriptionSemiBold),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: const Color(0xffF4FBF9),
+                                border: Border.all(color: boxAbu),
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Image.network(iconSiapDikirim, width: 42, height: 42),
+                            ),
+                            const SizedBox(height: 4),
+                            Text("Siap Dikirim", style: textDescriptionSemiBold),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  const Divider(color: boxAbu),
+                  const SizedBox(height: 24),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Produk", style: h4SemiBold),
+                      Text("Tambah Produk", style: h5SemiBold.copyWith(color: primary)),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Daftar Produkmu", style: textDescriptionMedium),
+                          Text("0 Produk", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                        ],
+                      ),
+                      Image.network(arrowRight, width: 24, height: 24),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Status Produkmu", style: textDescriptionMedium),
+                          Text("2 Produk Diproses", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                        ],
+                      ),
+                      Image.network(arrowRight, width: 24, height: 24),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  const Divider(color: boxAbu),
+                  const SizedBox(height: 24),
+                  Text("Respon Pembeli", style: h4SemiBold),
+                  const SizedBox(height: 16),
+                  Row(
+                    children: [
+                      Image.network(iconUlasan, width: 24, height: 24),
+                      const SizedBox(width: 8),
+                      Text("Ulasan", style: textDescriptionMedium),
+                    ],
+                  ),
+                  const SizedBox(height: 13),
+                  Row(
+                    children: [
+                      Image.network(iconPesananDikomplain, width: 24, height: 24),
+                      const SizedBox(width: 8),
+                      Text("Pesanan Dikomplain", style: textDescriptionMedium),
+                    ],
+                  ),
+                  const SizedBox(height: 24),
+                ],
+              ),
+            ),
+            const SizedBox(height: 12),
+            Container(
+              width: Get.width,
+              // height: 245,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              color: whiteColor,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 24),
+                  Text("Feed", style: h4SemiBold),
+                  const SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Unggah Postingan", style: textDescriptionMedium),
+                          Text("0 Postingan", style: h5Regular),
+                        ],
+                      ),
+                      Image.network(arrowRight, width: 24, height: 24),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  const Divider(color: boxAbu),
+                  const SizedBox(height: 16),
+                  Text("Bantuan", style: h4SemiBold),
+                  const SizedBox(height: 16),
+                  Row(
+                    children: [
+                      Image.network(iconPengaturanToko, width: 24, height: 24),
+                      const SizedBox(width: 8),
+                      Text("Pengaturan Toko", style: textDescriptionMedium),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  Row(
+                    children: [
+                      Image.network(iconCallCenter, width: 24, height: 24),
+                      const SizedBox(width: 8),
+                      Text("Call Center", style: textDescriptionMedium),
+                    ],
+                  ),
+                  const SizedBox(height: 24),
+                ],
+              ),
+            )
+          ],
         ),
       ),
+    );
+  }
+}
+
+class MySeparator extends StatelessWidget {
+  const MySeparator({Key? key, this.height = 1, this.color = Colors.black}) : super(key: key);
+  final double height;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        final boxWidth = constraints.constrainWidth();
+        const dashWidth = 2.0;
+        final dashHeight = height;
+        final dashCount = (boxWidth / (2 * dashWidth)).floor();
+        return Flex(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          direction: Axis.horizontal,
+          children: List.generate(dashCount, (_) {
+            return SizedBox(
+              width: dashWidth,
+              height: dashHeight,
+              child: DecoratedBox(
+                decoration: BoxDecoration(color: color),
+              ),
+            );
+          }),
+        );
+      },
     );
   }
 }
