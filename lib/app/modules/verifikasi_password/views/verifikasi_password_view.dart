@@ -90,6 +90,7 @@ class VerifikasiPasswordView extends GetView<VerifikasiPasswordController> {
           ),
         ),
       ),
+    
       bottomNavigationBar: BottomNavigationButton(
         onTap: () {},
         text: 'Kirim Kode Verifikasi',

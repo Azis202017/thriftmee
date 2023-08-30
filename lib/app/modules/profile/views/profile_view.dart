@@ -5,6 +5,7 @@ import 'package:thriftmee/app/constant/image_collection.dart';
 import 'package:thriftmee/app/shared/theme/color.dart';
 import 'package:thriftmee/app/shared/theme/font.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
@@ -74,14 +75,18 @@ class ProfileView extends GetView<ProfileController> {
                 children: [
                   CardRow(
                     name: 'Buka Toko',
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(Routes.OPEN_SHOP_FORM);
+                    },
                   ),
                   const SizedBox(
                     width: 13,
                   ),
                   CardRow(
                     name: 'Edit Profile ',
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(Routes.EDIT_PROFILE);
+                    },
                   )
                 ],
               ),

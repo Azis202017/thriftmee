@@ -213,6 +213,16 @@ TextStyle textDescription = GoogleFonts.poppins(
   color: font,
   fontSize: 15,
 );
+TextStyle textDescriptionSemiBold = GoogleFonts.poppins(
+  fontWeight: FontWeight.w600,
+  color: font,
+  fontSize: 15,
+);
+TextStyle textDescriptionMedium = GoogleFonts.poppins(
+  fontWeight: FontWeight.w500,
+  color: font,
+  fontSize: 15,
+);
 TextStyle textTitle = GoogleFonts.poppins(
   fontWeight: FontWeight.w400,
   color: font,

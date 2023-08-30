@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:thriftmee/app/constant/image_collection.dart';
 import 'package:thriftmee/app/shared/theme/color.dart';
 import 'package:thriftmee/app/shared/theme/font.dart';
+import '../../../shared/widgets/onboarding_content/onboarding_button.dart';
 import '../controllers/register_controller.dart';
 
 class RegisterView extends GetView<RegisterController> {
@@ -13,6 +15,20 @@ class RegisterView extends GetView<RegisterController> {
       builder: (_) {
         return SafeArea(
           child: Scaffold(
+            appBar: AppBar(
+              title:  Text('Daftar', style:h3SemiBold),
+              leading: IconButton(
+                onPressed: () {
+                  Get.back();
+                },
+                icon: const ImageIcon(
+                  NetworkImage(
+                    arrowLeftIcon,
+                  ),
+                ),
+              ),
+              centerTitle: true,
+            ),
             body: SingleChildScrollView(
               child: Container(
                 margin: const EdgeInsets.only(top: 37, left: 16, right: 16),
@@ -20,88 +36,82 @@ class RegisterView extends GetView<RegisterController> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Image.network(
-                      'https://res.cloudinary.com/dvjflmrkd/image/upload/v1689270044/thriftmee/c9nantsck1lhat9ctcwr.png',
+                    const Text(
+                      'Nama Lengkap',
                     ),
-                    const SizedBox(height: 22),
-                     Text(
-                      'Ayo Gabung Sekarang',
-                      style: h2Bold,
-                      textAlign: TextAlign.center,
+                    const SizedBox(
+                      height: 12,
                     ),
-                    const SizedBox(height: 22),
                     TextFormField(
-                      onChanged: controller.updateButtonState,
+                      onChanged: controller.onChangeName,
+                      controller: controller.nameController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 24,
+                    ),
+                    const Text(
+                      'Email atau Nomor Ponsel',
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    TextFormField(
+                      onChanged: controller.onChangeEmail,
                       controller: controller.emailController,
                       decoration: InputDecoration(
-                        labelText: 'Nama Lengkap',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 24,
+                    ),
+                    const Text(
+                      'Kata sandi',
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    TextFormField(
+                      onChanged: controller.onChangeKataSandi,
+                      controller: controller.kataSandiController,
+                      decoration: InputDecoration(
+                        suffixIcon: GestureDetector(
+                          onTap: controller.showVisible,
+                          child: !controller.isShowPassword
+                              ? SizedBox(
+                                  width: 20,
+                                  height: 20,
+                                  child: Image.network(
+                                    closeEyeIcon,
+                                  ),
+                                )
+                              : SizedBox(
+                                  width: 20,
+                                  height: 20,
+                                  child: Image.network(
+                                    eyeIcon,
+                                    width: 20,
+                                    height: 20,
+                                  ),
+                                ),
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                     ),
                     const SizedBox(height: 4),
-                    const Text('Contoh : 0881098738'),
                     const SizedBox(height: 17),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            controller.isButtonEnabled ? primary : fontAbu,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                      ),
-                      onPressed: controller.nextRegister,
-                      child: Text(
-                        'Selanjutnya',
-                        style: h4Bold.copyWith(
-                          color: whiteColor,
-                        ),
-                      ),
+                    const SizedBox(
+                      height: 18,
                     ),
-                    const SizedBox(height: 15),
-                    Row(
-                      children: [
-                        const Expanded(
-                          child: Divider(
-                            thickness: 2,
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 10),
-                          child:  Text('atau daftar dengan', style : body2Bold),
-                        ),
-                        const Expanded(
-                          child: Divider(
-                            thickness: 2,
-                          ),
-                        ),
-                      ],
-                    ),
-                  
-                    const SizedBox(height: 15),
-                    SizedBox(
-                      height: 56,
-                      child: OutlinedButton(
-                        onPressed: () {},
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.network(
-                              'https://res.cloudinary.com/dvjflmrkd/image/upload/v1689273607/thriftmee/qv5ckjmgpo1ixwgah5ib.png',
-                            ),
-                            const SizedBox(width: 10),
-                            Text(
-                              'Google',
-                              style: h4Bold,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                   
-                    const SizedBox(height: 7),
                     RichText(
                       textAlign: TextAlign.center,
                       text: const TextSpan(
@@ -128,29 +138,19 @@ class RegisterView extends GetView<RegisterController> {
                         ],
                       ),
                     ),
+                    
                     const SizedBox(height: 54),
-                    Center(
-                      child: GestureDetector(
-                        onTap: controller.toLoginPage,
-                        child: RichText(
-                          text: TextSpan(
-                            text: 'Sudah punya akun? ',
-                            style: h5Medium,
-                            children: [
-                              TextSpan(
-                                text: 'Masuk',
-                                style: h5Medium.copyWith(
-                                  color: primary,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 15),
                   ],
                 ),
+              ),
+            ),
+            bottomNavigationBar: BottomNavigationButton(
+              onTap:
+                  controller.isButtonEnabled ? controller.nextRegister : null,
+              text: 'Daftar ',
+              color: controller.isButtonEnabled ? primary : fontAbu,
+              style: h3Bold.copyWith(
+                color: whiteColor,
               ),
             ),
           ),

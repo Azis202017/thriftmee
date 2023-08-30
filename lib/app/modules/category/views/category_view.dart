@@ -50,6 +50,9 @@ class CategoryView extends GetView<CategoryController> {
         body: SingleChildScrollView(
           child: Column(
             children: [
+              const SizedBox(
+                height: 30,
+              ),
               Container(
                 margin: const EdgeInsets.symmetric(
                   horizontal: 16,
@@ -68,9 +71,6 @@ class CategoryView extends GetView<CategoryController> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(
-                          height: 30,
-                        ),
                         Container(
                           decoration: BoxDecoration(
                             color: secondaryColor,
@@ -222,7 +222,7 @@ class CategoryView extends GetView<CategoryController> {
                     title: 'Thrift',
                     image: thriftCategory,
                   ),
-                   SizedBox(
+                  SizedBox(
                     width: 8,
                   ),
                   CategoryCard(

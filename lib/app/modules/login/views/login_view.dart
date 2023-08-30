@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../constant/image_collection.dart';
 import '../../../shared/theme/color.dart';
 import '../../../shared/theme/font.dart';
 import '../controllers/login_controller.dart';
@@ -45,13 +46,40 @@ class LoginView extends GetView<LoginController> {
                   obscureText: !controller.isShowPassword ? true : false,
                   onChanged: controller.checkFillPassword,
                   decoration: InputDecoration(
-                    hintText: 'Masukkan kata sandi',
-                    suffixIcon: GestureDetector(
-                      onTap: controller.showVisible,
-                      child: !controller.isShowPassword
-                          ? const Icon(Icons.visibility_off)
-                          : const Icon(Icons.visibility),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16,
                     ),
+                    hintText: 'Masukkan kata sandi',
+                    suffixIconConstraints: const BoxConstraints(
+                      minHeight: 20,
+                      minWidth: 20,
+                    ),
+                    suffixIcon: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                      ),
+                      child: GestureDetector(
+                        onTap: controller.showVisible,
+                        child: !controller.isShowPassword
+                            ? SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: Image.network(
+                                  closeEyeIcon,
+                                ),
+                              )
+                            : SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: Image.network(
+                                  eyeIcon,
+                                  width: 20,
+                                  height: 20,
+                                ),
+                              ),
+                      ),
+                    ),
+                  
                   ),
                 ),
                 const SizedBox(
@@ -169,7 +197,6 @@ class LoginView extends GetView<LoginController> {
             ),
           ),
         ),
-       
       );
     });
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:thriftmee/app/routes/app_pages.dart';
 import 'package:thriftmee/app/shared/theme/color.dart';

@@ -14,7 +14,7 @@ Future<void> main() async {
           "https://ac932bc7fca6446ea9d1cfa7fcc78c03@o581344.ingest.sentry.io/4505590441181184";
       options.tracesSampleRate = 1.0;
     },
-    appRunner: () => runApp(
+  appRunner: () => runApp(
       const MyApp(),
     ),
   );

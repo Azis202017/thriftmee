@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thriftmee/app/shared/theme/color.dart';
 import 'package:thriftmee/app/shared/theme/font.dart';
 
 class EmptyState extends StatelessWidget {
@@ -6,6 +7,9 @@ class EmptyState extends StatelessWidget {
   final String title;
   final String? description;
   final String? textButton;
+  final bool? isShowButton;
+  final String? nameButton;
+  final void Function()? onPressed;
 
   const EmptyState({
     super.key,
@@ -13,13 +17,17 @@ class EmptyState extends StatelessWidget {
     required this.title,
     this.description,
     this.textButton,
+    this.isShowButton = false,
+    this.nameButton = "",
+    this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(image),
+        Image.network(image),
         Text(
           title,
           style: h3SemiBold,
@@ -29,7 +37,28 @@ class EmptyState extends StatelessWidget {
           description ?? "",
           style: h4Regular,
           textAlign: TextAlign.center,
-        )
+        ),
+        const SizedBox(
+          height: 47,
+        ),
+        isShowButton == true
+            ? SizedBox(
+                width: double.infinity,
+                height: 40,
+                child: ElevatedButton(
+                  onPressed: onPressed,
+                  child: Text(
+                    nameButton ?? "",
+                    style: h3Bold.copyWith(
+                      color: whiteColor,
+                    ),
+                  ),
+                ),
+              )
+            : const SizedBox(),
+        const SizedBox(
+          height: 100,
+        ),
       ],
     );
   }

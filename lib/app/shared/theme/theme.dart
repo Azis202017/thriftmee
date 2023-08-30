@@ -52,13 +52,14 @@ ThemeData theme = ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-        disabledBackgroundColor: inactiveColorButton,
-        disabledForegroundColor: whiteColor,
-        backgroundColor: primary,
-        foregroundColor: whiteColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        )),
+      disabledBackgroundColor: inactiveColorButton,
+      disabledForegroundColor: whiteColor,
+      backgroundColor: primary,
+      foregroundColor: whiteColor,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+    ),
   ),
   outlinedButtonTheme: OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(

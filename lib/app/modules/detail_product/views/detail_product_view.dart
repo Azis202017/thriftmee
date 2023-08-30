@@ -10,15 +10,11 @@ class DetailProductView extends GetView<DetailProductController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('DetailProductView'),
+        automaticallyImplyLeading: false,
+        
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'DetailProductView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+     
     );
   }
 }

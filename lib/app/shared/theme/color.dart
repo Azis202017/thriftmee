@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 const Color primary = Color(0xff053F33);
-const Color secondaryColor = Color(0xff244C1A);
+const Color secondaryColor = Color(0xff9FCD9F);
+const Color backgroundColor = Color(0xffFBFBFB);
+
 const Color accentColor = Color(0xffF4FBF7);
 const Color primary0 = Color(0xffC9EDD7);
 const Color primary05 = Color(0xffB8E0C8);
@@ -29,7 +31,7 @@ const Color accent8 = Color(0xff0E1E0A);
 const Color accent85 = Color(0xff0B1708);
 const Color accent9 = Color(0xff070F05);
 
-const Color placeHolder = Color(0xff807474);
+const Color placeHolder = Color(0xffEAEAEA);
 const Color placeHolder2 = Color(0xff807474);
 
 const Color black = Colors.black;
