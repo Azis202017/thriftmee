@@ -37,6 +37,7 @@ abstract class Routes {
   static const ADD_ADDRESS = _Paths.ADD_ADDRESS;
   static const CHOOSE_LOCATION = _Paths.CHOOSE_LOCATION;
   static const HOME_TOKO = _Paths.HOME_TOKO;
+  static const KOMENTAR = _Paths.KOMENTAR;
 }
 
 abstract class _Paths {
@@ -75,4 +76,5 @@ abstract class _Paths {
   static const ADD_ADDRESS = '/add-address';
   static const CHOOSE_LOCATION = '/choose-location';
   static const HOME_TOKO = '/home-toko';
+  static const KOMENTAR = '/komentar';
 }

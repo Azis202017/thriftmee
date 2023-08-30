@@ -123,3 +123,9 @@ const iconPesananDikomplain = "https://res.cloudinary.com/drvbofr7e/image/upload
 const iconPengaturanToko = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693378679/iconPengaturanToko_tbccnk.png";
 
 const iconCallCenter = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693378864/iconCallCenter_rsxdnw.png";
+
+const avatarNillaEssy = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693397282/avatarNillaEssy_tj3gsx.png";
+
+const avatarKemaWear = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693397602/avatarKemaWear_ankupu.png";
+
+const avatarSitaasihpur = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693398139/avatarSitaasihpur_ennsei.png";

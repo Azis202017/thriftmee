@@ -26,6 +26,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home_toko/bindings/home_toko_binding.dart';
 import '../modules/home_toko/views/home_toko_view.dart';
+import '../modules/komentar/bindings/komentar_binding.dart';
+import '../modules/komentar/views/komentar_view.dart';
 import '../modules/list_address/bindings/list_address_binding.dart';
 import '../modules/list_address/views/list_address_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -70,7 +72,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME_TOKO;
+  static const INITIAL = Routes.KOMENTAR;
 
   static final routes = [
     GetPage(
@@ -232,6 +234,11 @@ class AppPages {
       name: _Paths.HOME_TOKO,
       page: () => const HomeTokoView(),
       binding: HomeTokoBinding(),
+    ),
+    GetPage(
+      name: _Paths.KOMENTAR,
+      page: () => const KomentarView(),
+      binding: KomentarBinding(),
     ),
   ];
 }
