@@ -24,6 +24,8 @@ import '../modules/forgot-password/bindings/forgot_password_binding.dart';
 import '../modules/forgot-password/views/forgot_password_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/home_toko/bindings/home_toko_binding.dart';
+import '../modules/home_toko/views/home_toko_view.dart';
 import '../modules/list_address/bindings/list_address_binding.dart';
 import '../modules/list_address/views/list_address_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -225,6 +227,11 @@ class AppPages {
       name: _Paths.CHOOSE_LOCATION,
       page: () => const ChooseLocationView(),
       binding: ChooseLocationBinding(),
+    ),
+    GetPage(
+      name: _Paths.HOME_TOKO,
+      page: () => const HomeTokoView(),
+      binding: HomeTokoBinding(),
     ),
   ];
 }
