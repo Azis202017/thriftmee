@@ -129,3 +129,9 @@ const avatarNillaEssy = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693
 const avatarKemaWear = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693397602/avatarKemaWear_ankupu.png";
 
 const avatarSitaasihpur = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693398139/avatarSitaasihpur_ennsei.png";
+
+const imageKemaWear1 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693399678/imageKemaWear1_pvafp6.png";
+
+const imageFotoUlasan1 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693444203/imageFotoUlasan1_kxiiik.png";
+
+const imageFotoUlasan2 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693444992/imageFotoUlasan2_d0lsfc.png";

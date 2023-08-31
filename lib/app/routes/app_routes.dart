@@ -38,6 +38,8 @@ abstract class Routes {
   static const CHOOSE_LOCATION = _Paths.CHOOSE_LOCATION;
   static const HOME_TOKO = _Paths.HOME_TOKO;
   static const KOMENTAR = _Paths.KOMENTAR;
+  static const KATEGORI_THRIFT = _Paths.KATEGORI_THRIFT;
+  static const FOTO_ULASAN = _Paths.FOTO_ULASAN;
 }
 
 abstract class _Paths {
@@ -77,4 +79,6 @@ abstract class _Paths {
   static const CHOOSE_LOCATION = '/choose-location';
   static const HOME_TOKO = '/home-toko';
   static const KOMENTAR = '/komentar';
+  static const KATEGORI_THRIFT = '/kategori-thrift';
+  static const FOTO_ULASAN = '/foto-ulasan';
 }

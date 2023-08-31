@@ -22,10 +22,14 @@ import '../modules/feed/bindings/feed_binding.dart';
 import '../modules/feed/views/feed_view.dart';
 import '../modules/forgot-password/bindings/forgot_password_binding.dart';
 import '../modules/forgot-password/views/forgot_password_view.dart';
+import '../modules/foto_ulasan/bindings/foto_ulasan_binding.dart';
+import '../modules/foto_ulasan/views/foto_ulasan_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home_toko/bindings/home_toko_binding.dart';
 import '../modules/home_toko/views/home_toko_view.dart';
+import '../modules/kategori_thrift/bindings/kategori_thrift_binding.dart';
+import '../modules/kategori_thrift/views/kategori_thrift_view.dart';
 import '../modules/komentar/bindings/komentar_binding.dart';
 import '../modules/komentar/views/komentar_view.dart';
 import '../modules/list_address/bindings/list_address_binding.dart';
@@ -72,7 +76,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.KOMENTAR;
+  static const INITIAL = Routes.FOTO_ULASAN;
 
   static final routes = [
     GetPage(
@@ -239,6 +243,16 @@ class AppPages {
       name: _Paths.KOMENTAR,
       page: () => const KomentarView(),
       binding: KomentarBinding(),
+    ),
+    GetPage(
+      name: _Paths.KATEGORI_THRIFT,
+      page: () => const KategoriThriftView(),
+      binding: KategoriThriftBinding(),
+    ),
+    GetPage(
+      name: _Paths.FOTO_ULASAN,
+      page: () => const FotoUlasanView(),
+      binding: FotoUlasanBinding(),
     ),
   ];
 }
