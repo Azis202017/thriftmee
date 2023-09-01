@@ -80,7 +80,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.CHECKOUT;
+  static const INITIAL = Routes.DESKRIPSI_PRODUK;
 
   static final routes = [
     GetPage(

@@ -50,6 +50,17 @@ class DeskripsiProdukView extends GetView<DeskripsiProdukController> {
                 Text("0/3000", style: h5Regular),
               ],
             ),
+            Expanded(
+              child: SizedBox(width: Get.width),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                fixedSize: Size(Get.width, 48),
+              ),
+              child: Center(child: Text("Simpan", style: h3Bold.copyWith(color: whiteColor))),
+            ),
+            const SizedBox(height: 30),
           ],
         ),
       ),
