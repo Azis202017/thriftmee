@@ -40,6 +40,7 @@ abstract class Routes {
   static const KOMENTAR = _Paths.KOMENTAR;
   static const KATEGORI_THRIFT = _Paths.KATEGORI_THRIFT;
   static const FOTO_ULASAN = _Paths.FOTO_ULASAN;
+  static const DESKRIPSI_PRODUK = _Paths.DESKRIPSI_PRODUK;
 }
 
 abstract class _Paths {
@@ -81,4 +82,5 @@ abstract class _Paths {
   static const KOMENTAR = '/komentar';
   static const KATEGORI_THRIFT = '/kategori-thrift';
   static const FOTO_ULASAN = '/foto-ulasan';
+  static const DESKRIPSI_PRODUK = '/deskripsi-produk';
 }

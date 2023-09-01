@@ -14,6 +14,8 @@ import '../modules/choose_location/bindings/choose_location_binding.dart';
 import '../modules/choose_location/views/choose_location_view.dart';
 import '../modules/create_account/bindings/create_account_binding.dart';
 import '../modules/create_account/views/create_account_view.dart';
+import '../modules/deskripsi_produk/bindings/deskripsi_produk_binding.dart';
+import '../modules/deskripsi_produk/views/deskripsi_produk_view.dart';
 import '../modules/detail_product/bindings/detail_product_binding.dart';
 import '../modules/detail_product/views/detail_product_view.dart';
 import '../modules/edit_profile/bindings/edit_profile_binding.dart';
@@ -76,7 +78,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.FOTO_ULASAN;
+  static const INITIAL = Routes.DESKRIPSI_PRODUK;
 
   static final routes = [
     GetPage(
@@ -253,6 +255,11 @@ class AppPages {
       name: _Paths.FOTO_ULASAN,
       page: () => const FotoUlasanView(),
       binding: FotoUlasanBinding(),
+    ),
+    GetPage(
+      name: _Paths.DESKRIPSI_PRODUK,
+      page: () => const DeskripsiProdukView(),
+      binding: DeskripsiProdukBinding(),
     ),
   ];
 }
