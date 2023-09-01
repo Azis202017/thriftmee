@@ -48,3 +48,4 @@ const Color boxAbu = Color(0xffD3D3D3);
 
 const Color inactiveColorButton = Color(0xff4B4B4B);
 
+const Color font2 = Color(0xff5D5F60); // tambahan (aldian)
