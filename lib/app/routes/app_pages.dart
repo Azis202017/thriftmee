@@ -10,6 +10,8 @@ import '../modules/category_detail/bindings/category_detail_binding.dart';
 import '../modules/category_detail/views/category_detail_view.dart';
 import '../modules/change_address/bindings/change_address_binding.dart';
 import '../modules/change_address/views/change_address_view.dart';
+import '../modules/checkout/bindings/checkout_binding.dart';
+import '../modules/checkout/views/checkout_view.dart';
 import '../modules/choose_location/bindings/choose_location_binding.dart';
 import '../modules/choose_location/views/choose_location_view.dart';
 import '../modules/create_account/bindings/create_account_binding.dart';
@@ -78,7 +80,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.DESKRIPSI_PRODUK;
+  static const INITIAL = Routes.CHECKOUT;
 
   static final routes = [
     GetPage(
@@ -260,6 +262,11 @@ class AppPages {
       name: _Paths.DESKRIPSI_PRODUK,
       page: () => const DeskripsiProdukView(),
       binding: DeskripsiProdukBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHECKOUT,
+      page: () => const CheckoutView(),
+      binding: CheckoutBinding(),
     ),
   ];
 }

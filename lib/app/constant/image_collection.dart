@@ -135,3 +135,7 @@ const imageKemaWear1 = "https://res.cloudinary.com/drvbofr7e/image/upload/v16933
 const imageFotoUlasan1 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693444203/imageFotoUlasan1_kxiiik.png";
 
 const imageFotoUlasan2 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693444992/imageFotoUlasan2_d0lsfc.png";
+
+const imageRootsCanada = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693554090/imageRootsCanada_cleurr.png";
+
+const imageRootsCanada2 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693555365/imageRootsCanada2_cbbnjj.png";

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:thriftmee/app/constant/image_collection.dart';
 import 'package:thriftmee/app/shared/theme/font.dart';
@@ -21,7 +20,7 @@ class FotoUlasanView extends GetView<FotoUlasanController> {
         child: Column(
           children: [
             const SizedBox(height: 22),
-            Expanded(
+            Flexible(
               child: GridView(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
