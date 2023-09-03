@@ -11,7 +11,7 @@ class DeskripsiProdukView extends GetView<DeskripsiProdukController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Deskripsi Produk', style: h3SemiBold),
+        title: Text('Deskripsi Produk', style: h3SemiBold.copyWith(color: font)),
         centerTitle: true,
         elevation: 1,
       ),
@@ -21,14 +21,14 @@ class DeskripsiProdukView extends GetView<DeskripsiProdukController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 16),
-            Text("Masukan deskripsi produk", style: h4SemiBold),
+            Text("Masukan deskripsi produk", style: h4SemiBold.copyWith(color: font)),
             const SizedBox(height: 24),
             TextFormField(
               autocorrect: false,
               maxLines: null,
               decoration: InputDecoration(
                 hintText: "Deskripsi Produk",
-                hintStyle: textDescription.copyWith(color: const Color(0xff5D5F60)),
+                hintStyle: textDescription..copyWith(color: font2),
                 contentPadding: const EdgeInsets.symmetric(horizontal: 4),
                 enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(color: boxAbu),
@@ -43,11 +43,11 @@ class DeskripsiProdukView extends GetView<DeskripsiProdukController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                  child: Text("Tips: Tuliskan deskripsi produk kamu dengan jelas dan detail.", style: h5Regular),
+                  child: Text("Tips: Tuliskan deskripsi produk kamu dengan jelas dan detail.", style: h5Regular.copyWith(color: font2)),
                 ),
                 const SizedBox(width: 90),
                 // TODO ini jumlah karakternya belum
-                Text("0/3000", style: h5Regular),
+                Text("0/3000", style: h5Regular.copyWith(color: font2)),
               ],
             ),
             Expanded(

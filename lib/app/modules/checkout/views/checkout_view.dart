@@ -13,7 +13,7 @@ class CheckoutView extends GetView<CheckoutController> {
     return Scaffold(
       backgroundColor: accentColor,
       appBar: AppBar(
-        title: Text('Pengiriman', style: h3SemiBold),
+        title: Text('Pengiriman', style: h3SemiBold.copyWith(color: font)),
         centerTitle: true,
         elevation: 1,
       ),
@@ -31,18 +31,18 @@ class CheckoutView extends GetView<CheckoutController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Alamat pengiriman", style: textDescriptionSemiBold),
+                      Text("Alamat pengiriman", style: textDescriptionSemiBold.copyWith(color: font)),
                       Text("Pilih alamat lain", style: textDescriptionSemiBold.copyWith(color: primary)),
                     ],
                   ),
                   const SizedBox(height: 8),
                   const Divider(color: boxAbu),
                   const SizedBox(height: 8),
-                  Text("Alamat", style: textDescriptionSemiBold),
+                  Text("Alamat", style: textDescriptionSemiBold.copyWith(color: font)),
                   const SizedBox(height: 4),
-                  Text("Adingg (6281910192882)", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                  Text("Adingg (6281910192882)", style: h5Regular..copyWith(color: font2)),
                   const SizedBox(height: 2),
-                  Text("Jalan buah batu, kota Bandung, Jawa barat.", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                  Text("Jalan buah batu, kota Bandung, Jawa barat.", style: h5Regular.copyWith(color: font2)),
                   const SizedBox(height: 11),
                 ],
               ),
@@ -56,10 +56,10 @@ class CheckoutView extends GetView<CheckoutController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 16),
-                  Text("Pesananan saya (3 produk)", style: h4SemiBold),
+                  Text("Pesananan saya (3 produk)", style: h4SemiBold.copyWith(color: font)),
                   const SizedBox(height: 16),
-                  Text("Kema.wear", style: h4Medium),
-                  Text("Cimahi, Bandung", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                  Text("Kema.wear", style: h4Medium.copyWith(color: font)),
+                  Text("Cimahi, Bandung", style: h5Regular.copyWith(color: font2)),
                   const SizedBox(height: 8),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -77,13 +77,13 @@ class CheckoutView extends GetView<CheckoutController> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Roots Canada", style: textDescriptionMedium),
-                            Text("Abu-abu/L", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
-                            Text("1 buah", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                            Text("Roots Canada", style: textDescriptionMedium.copyWith(color: font)),
+                            Text("Abu-abu/L", style: h5Regular.copyWith(color: font2)),
+                            Text("1 buah", style: h5Regular.copyWith(color: font2)),
                           ],
                         ),
                       ),
-                      Text("Rp50.000", style: textDescriptionSemiBold),
+                      Text("Rp50.000", style: textDescriptionSemiBold.copyWith(color: font)),
                     ],
                   ),
                   const SizedBox(height: 20),
@@ -101,16 +101,16 @@ class CheckoutView extends GetView<CheckoutController> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text("Pengiriman", style: textDescriptionMedium),
+                            Text("Pengiriman", style: textDescriptionMedium.copyWith(color: font)),
                             Text("Pilih metode lain", style: h5SemiBold.copyWith(color: primary)),
                           ],
                         ),
                         const SizedBox(height: 8),
                         const Divider(color: boxAbu),
                         const SizedBox(height: 4),
-                        Text("Standard", style: textDescriptionMedium),
-                        Text("Rp 11.000", style: textDescription),
-                        Text("Estimasi pesanan sampai 1 - 4 hari", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                        Text("Standard", style: textDescriptionMedium.copyWith(color: font)),
+                        Text("Rp 11.000", style: textDescription.copyWith(color: font)),
+                        Text("Estimasi pesanan sampai 1 - 4 hari", style: h5Regular.copyWith(color: font2)),
                         const SizedBox(height: 10),
                       ],
                     ),
@@ -119,8 +119,8 @@ class CheckoutView extends GetView<CheckoutController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Sub Total", style: h4Medium.copyWith(color: const Color(0xff5D5F60))),
-                      Text("Rp61.000", style: h4SemiBold),
+                      Text("Sub Total", style: h4Medium.copyWith(color: font2)),
+                      Text("Rp61.000", style: h4SemiBold.copyWith(color: font)),
                     ],
                   ),
                   const SizedBox(height: 15),
@@ -136,8 +136,8 @@ class CheckoutView extends GetView<CheckoutController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 16),
-                  Text("Erigo ", style: h4Medium),
-                  Text("Cimahi, Bandung", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                  Text("Erigo ", style: h4Medium.copyWith(color: font)),
+                  Text("Cimahi, Bandung", style: h5Regular.copyWith(color: font2)),
                   const SizedBox(height: 8),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -155,13 +155,13 @@ class CheckoutView extends GetView<CheckoutController> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Roots Canada", style: textDescriptionMedium),
-                            Text("Abu-abu/L", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
-                            Text("2 buah", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                            Text("Roots Canada", style: textDescriptionMedium.copyWith(color: font)),
+                            Text("Abu-abu/L", style: h5Regular.copyWith(color: font2)),
+                            Text("2 buah", style: h5Regular.copyWith(color: font2)),
                           ],
                         ),
                       ),
-                      Text("Rp100.000", style: textDescriptionSemiBold),
+                      Text("Rp100.000", style: textDescriptionSemiBold.copyWith(color: font)),
                     ],
                   ),
                   const SizedBox(height: 20),
@@ -179,16 +179,16 @@ class CheckoutView extends GetView<CheckoutController> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text("Pengiriman", style: textDescriptionMedium),
+                            Text("Pengiriman", style: textDescriptionMedium.copyWith(color: font)),
                             Text("Pilih metode lain", style: h5SemiBold.copyWith(color: primary)),
                           ],
                         ),
                         const SizedBox(height: 8),
                         const Divider(color: boxAbu),
                         const SizedBox(height: 4),
-                        Text("Standard", style: textDescriptionMedium),
-                        Text("Rp 11.000", style: textDescription),
-                        Text("Estimasi pesanan sampai 1 - 4 hari", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                        Text("Standard", style: textDescriptionMedium.copyWith(color: font)),
+                        Text("Rp 11.000", style: textDescription.copyWith(color: font)),
+                        Text("Estimasi pesanan sampai 1 - 4 hari", style: h5Regular.copyWith(color: font2)),
                         const SizedBox(height: 10),
                       ],
                     ),
@@ -197,8 +197,8 @@ class CheckoutView extends GetView<CheckoutController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Sub Total", style: h4Medium.copyWith(color: const Color(0xff5D5F60))),
-                      Text("Rp611.000", style: h4SemiBold),
+                      Text("Sub Total", style: h4Medium.copyWith(color: font2)),
+                      Text("Rp611.000", style: h4SemiBold.copyWith(color: font)),
                     ],
                   ),
                   const SizedBox(height: 15),
@@ -214,20 +214,20 @@ class CheckoutView extends GetView<CheckoutController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 14),
-                  Text("Ringkasan Belanja", style: h4SemiBold),
+                  Text("Ringkasan Belanja", style: h4SemiBold.copyWith(color: font)),
                   const SizedBox(height: 8),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Total Harga (3 Barang)", style: textDescription),
-                      Text("Rp150.000", style: textDescriptionSemiBold),
+                      Text("Total Harga (3 Barang)", style: textDescription.copyWith(color: font)),
+                      Text("Rp150.000", style: textDescriptionSemiBold.copyWith(color: font)),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Total Biaya Kirim", style: textDescription),
-                      Text("Rp22.000", style: textDescriptionSemiBold),
+                      Text("Total Biaya Kirim", style: textDescription.copyWith(color: font)),
+                      Text("Rp22.000", style: textDescriptionSemiBold.copyWith(color: font)),
                     ],
                   ),
                   const SizedBox(height: 14),
@@ -258,8 +258,8 @@ class CheckoutView extends GetView<CheckoutController> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Total Belanja", style: textDescriptionSemiBold),
-                          Text("Rp172.000", style: h4SemiBold),
+                          Text("Total Belanja", style: textDescriptionSemiBold.copyWith(color: font)),
+                          Text("Rp172.000", style: h4SemiBold.copyWith(color: font)),
                         ],
                       ),
                       ElevatedButton(
