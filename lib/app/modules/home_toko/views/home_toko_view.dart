@@ -13,7 +13,7 @@ class HomeTokoView extends GetView<HomeTokoController> {
     return Scaffold(
       backgroundColor: placeHolder,
       appBar: AppBar(
-        title: Text('Toko Saya', style: h3SemiBold),
+        title: Text('Toko Saya', style: h3SemiBold.copyWith(color: font)),
         centerTitle: true,
         elevation: 1,
       ),
@@ -35,12 +35,12 @@ class HomeTokoView extends GetView<HomeTokoController> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("MeiMei Shop.", style: h3SemiBold),
+                          Text("MeiMei Shop.", style: h3SemiBold.copyWith(color: font)),
                           Row(
                             children: [
                               Image.network(iconPengikut, width: 24, height: 24),
                               const SizedBox(width: 8),
-                              Text("10 Pengikut", style: textDescription.copyWith(color: const Color(0xff5D5F60))),
+                              Text("10 Pengikut", style: textDescription.copyWith(color: font2)),
                             ],
                           ),
                         ],
@@ -58,15 +58,15 @@ class HomeTokoView extends GetView<HomeTokoController> {
                     ),
                     child: Column(
                       children: [
-                        Text("Transaksi Penjual", style: h4SemiBold),
+                        Text("Transaksi Penjual", style: h4SemiBold.copyWith(color: font)),
                         const SizedBox(height: 8),
                         const MySeparator(color: boxAbu),
                         const SizedBox(height: 8),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text("Transaksi sejak bergabung", style: textDescription),
-                            Text("0", style: h4SemiBold),
+                            Text("Transaksi sejak bergabung", style: textDescription.copyWith(color: font)),
+                            Text("0", style: h4SemiBold.copyWith(color: font)),
                           ],
                         ),
                       ],
@@ -89,7 +89,7 @@ class HomeTokoView extends GetView<HomeTokoController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Penjualan", style: h4SemiBold),
+                      Text("Penjualan", style: h4SemiBold.copyWith(color: font)),
                       Text("Lihat Riwayat", style: h5SemiBold.copyWith(color: primary)),
                     ],
                   ),
@@ -105,14 +105,14 @@ class HomeTokoView extends GetView<HomeTokoController> {
                               width: 50,
                               height: 50,
                               decoration: BoxDecoration(
-                                color: const Color(0xffF4FBF9),
+                                color: accentColor,
                                 border: Border.all(color: boxAbu),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               child: Image.network(iconPesananBaru, width: 43, height: 43),
                             ),
                             const SizedBox(height: 4),
-                            Text("Pesanan Baru", style: textDescriptionSemiBold),
+                            Text("Pesanan Baru", style: textDescriptionSemiBold.copyWith(color: font)),
                           ],
                         ),
                         Column(
@@ -121,14 +121,14 @@ class HomeTokoView extends GetView<HomeTokoController> {
                               width: 50,
                               height: 50,
                               decoration: BoxDecoration(
-                                color: const Color(0xffF4FBF9),
+                                color: accentColor,
                                 border: Border.all(color: boxAbu),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               child: Image.network(iconSiapDikirim, width: 42, height: 42),
                             ),
                             const SizedBox(height: 4),
-                            Text("Siap Dikirim", style: textDescriptionSemiBold),
+                            Text("Siap Dikirim", style: textDescriptionSemiBold.copyWith(color: font)),
                           ],
                         ),
                       ],
@@ -140,7 +140,7 @@ class HomeTokoView extends GetView<HomeTokoController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Produk", style: h4SemiBold),
+                      Text("Produk", style: h4SemiBold.copyWith(color: font)),
                       Text("Tambah Produk", style: h5SemiBold.copyWith(color: primary)),
                     ],
                   ),
@@ -151,8 +151,8 @@ class HomeTokoView extends GetView<HomeTokoController> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Daftar Produkmu", style: textDescriptionMedium),
-                          Text("0 Produk", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                          Text("Daftar Produkmu", style: textDescriptionMedium.copyWith(color: font)),
+                          Text("0 Produk", style: h5Regular.copyWith(color: font2)),
                         ],
                       ),
                       Image.network(arrowRight, width: 24, height: 24),
@@ -165,8 +165,8 @@ class HomeTokoView extends GetView<HomeTokoController> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Status Produkmu", style: textDescriptionMedium),
-                          Text("2 Produk Diproses", style: h5Regular.copyWith(color: const Color(0xff5D5F60))),
+                          Text("Status Produkmu", style: textDescriptionMedium.copyWith(color: font)),
+                          Text("2 Produk Diproses", style: h5Regular.copyWith(color: font2)),
                         ],
                       ),
                       Image.network(arrowRight, width: 24, height: 24),
@@ -175,13 +175,13 @@ class HomeTokoView extends GetView<HomeTokoController> {
                   const SizedBox(height: 12),
                   const Divider(color: boxAbu),
                   const SizedBox(height: 24),
-                  Text("Respon Pembeli", style: h4SemiBold),
+                  Text("Respon Pembeli", style: h4SemiBold.copyWith(color: font)),
                   const SizedBox(height: 16),
                   Row(
                     children: [
                       Image.network(iconUlasan, width: 24, height: 24),
                       const SizedBox(width: 8),
-                      Text("Ulasan", style: textDescriptionMedium),
+                      Text("Ulasan", style: textDescriptionMedium.copyWith(color: font)),
                     ],
                   ),
                   const SizedBox(height: 13),
@@ -189,7 +189,7 @@ class HomeTokoView extends GetView<HomeTokoController> {
                     children: [
                       Image.network(iconPesananDikomplain, width: 24, height: 24),
                       const SizedBox(width: 8),
-                      Text("Pesanan Dikomplain", style: textDescriptionMedium),
+                      Text("Pesanan Dikomplain", style: textDescriptionMedium.copyWith(color: font)),
                     ],
                   ),
                   const SizedBox(height: 24),
@@ -206,7 +206,7 @@ class HomeTokoView extends GetView<HomeTokoController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 24),
-                  Text("Feed", style: h4SemiBold),
+                  Text("Feed", style: h4SemiBold.copyWith(color: font)),
                   const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -214,8 +214,8 @@ class HomeTokoView extends GetView<HomeTokoController> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Unggah Postingan", style: textDescriptionMedium),
-                          Text("0 Postingan", style: h5Regular),
+                          Text("Unggah Postingan", style: textDescriptionMedium.copyWith(color: font)),
+                          Text("0 Postingan", style: h5Regular.copyWith(color: font2)),
                         ],
                       ),
                       Image.network(arrowRight, width: 24, height: 24),
@@ -224,13 +224,13 @@ class HomeTokoView extends GetView<HomeTokoController> {
                   const SizedBox(height: 12),
                   const Divider(color: boxAbu),
                   const SizedBox(height: 16),
-                  Text("Bantuan", style: h4SemiBold),
+                  Text("Bantuan", style: h4SemiBold.copyWith(color: font)),
                   const SizedBox(height: 16),
                   Row(
                     children: [
                       Image.network(iconPengaturanToko, width: 24, height: 24),
                       const SizedBox(width: 8),
-                      Text("Pengaturan Toko", style: textDescriptionMedium),
+                      Text("Pengaturan Toko", style: textDescriptionMedium.copyWith(color: font)),
                     ],
                   ),
                   const SizedBox(height: 12),
@@ -238,7 +238,7 @@ class HomeTokoView extends GetView<HomeTokoController> {
                     children: [
                       Image.network(iconCallCenter, width: 24, height: 24),
                       const SizedBox(width: 8),
-                      Text("Call Center", style: textDescriptionMedium),
+                      Text("Call Center", style: textDescriptionMedium.copyWith(color: font)),
                     ],
                   ),
                   const SizedBox(height: 24),

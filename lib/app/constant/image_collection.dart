@@ -132,6 +132,24 @@ const avatarSitaasihpur = "https://res.cloudinary.com/drvbofr7e/image/upload/v16
 
 const imageKemaWear1 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693399678/imageKemaWear1_pvafp6.png";
 
+const imageKemaWear2 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693739759/imageKemaWear2_fbtbtb.png";
+
+const imageKemaWear3 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693740250/imageKemaWear3_uvgibx.png";
+
+const imageKemaWear4 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693740351/imageKemaWear4_uljq9o.png";
+
+const imageKemaWear5 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693740503/imageKemaWear5_inbh0o.png";
+
+const imageKemaWear6 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693740547/imageKemaWear6_r8xrku.png";
+
+const imageKemaWear7 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693740579/imageKemaWear7_qct0mu.png";
+
+const imageKemaWear8 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693740615/imageKemaWear8_jvihcd.png";
+
+const imageKemaWear9 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693740653/imageKemaWear9_hlx59n.png";
+
+const imageKemaWear10 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693740696/imageKemaWear10_tzrhud.png";
+
 const imageFotoUlasan1 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693444203/imageFotoUlasan1_kxiiik.png";
 
 const imageFotoUlasan2 = "https://res.cloudinary.com/drvbofr7e/image/upload/v1693444992/imageFotoUlasan2_d0lsfc.png";
